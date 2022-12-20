@@ -189,9 +189,7 @@ bool Enforcer::m_enforce(const std::string& matcher, std::shared_ptr<IEvaluator>
     return result;
 }
 
-// enforce use a custom matcher to decides whether a "subject" can access a "object"
-// with the operation "action", input parameters are usually: (matcher, sub, obj, act),
-// use model matcher by default when matcher is "".
+// add explain to original m_enforce
 bool Enforcer::m_enforce(const std::string& matcher, std::vector<std::string> &explain, std::shared_ptr<IEvaluator> evalator) {
     evalator->func_list.clear();
     evalator->LoadFunctions();
